@@ -1,0 +1,15 @@
+.PHONY: all say_hello generate clean
+
+# .DEFAULT_GOAL := generate
+all: say_hello generate
+
+say_hello:
+	@echo "Hello MakeFile"
+
+generate:
+	@echo "Creating empty txt file"
+	touch file-{1..10}.txt
+
+clean:
+	@echo "Clean up"
+	rm *.txt
